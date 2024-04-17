@@ -11,10 +11,13 @@ function scrapTimeStoriesData(cb) {
             data += chunk;
         });
 
+
+
+        console.log('regex:', regex);
+
         res.on('end', () => {
             const stories = [];
-            console.log('data:', data);
-
+            stories.push(data);
         });
     }).on('error', (err) => {
         console.error('Error fetching Time stories:', err);

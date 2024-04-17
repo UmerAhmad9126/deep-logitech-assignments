@@ -1,6 +1,6 @@
 # Deeep Logitech Assignments
 
-This project is a Node.js app that gets the newest 6 stories from Time.com. It doesn't use any outside tools, just the basic parts of Node.js like `http`.
+This assignment is a Node.js app that gets the newest 6 stories from Time.com. It doesn't use any outside tools, just the basic parts of Node.js like `http`.
 
 ## Features
 

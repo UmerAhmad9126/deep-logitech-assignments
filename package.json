@@ -1,0 +1,13 @@
+{
+  "name": "deep-logitech-assignments",
+  "version": "1.0.0",
+  "description": "This assignment is a Node.js app that gets the newest 6 stories from Time.com. It doesn't use any outside tools, just the basic parts of Node.js like `http`.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

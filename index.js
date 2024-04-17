@@ -1,23 +1,34 @@
-const http = require('http');
+const https = require('https');
 
 
+function fetchTimeStories(callback) {
+    const TIME_URL = 'https://time.com/';
 
-function scrapTimeStoriesData(cb) {
-
-    http.get('http://time.com', (res) => {
-
+    https.get(TIME_URL, (res) => {
         let data = '';
         res.on('data', (chunk) => {
             data += chunk;
         });
-
-
-
-        console.log('regex:', regex);
-
         res.on('end', () => {
-            const stories = [];
-            stories.push(data);
+            
+
+            const latestStories = [];
+            let storyCount = 0;
+
+
+            const regex = /<li class="latest-stories__item">[\s\S]*?<a href="([^"]+)">[\s\S]*?<h3 class="latest-stories__item-headline">([\s\S]*?)<\/h3>/g;
+            let match;
+
+            while ((match = regex.exec(data)) !== null && storyCount < 6) {
+                const storyUrl = match[1];
+                const title = match[2].trim();
+                latestStories.push({ title, url: 'https://time.com' + storyUrl });
+                storyCount++;
+            }
+
+
+            callback(latestStories)
+
         });
     }).on('error', (err) => {
         console.error('Error fetching Time stories:', err);
@@ -29,7 +40,7 @@ function scrapTimeStoriesData(cb) {
 
 const server = http.createServer((req, res) => {
     if (req.url === '/getTimeStories') {
-        scrapTimeStoriesData((stories) => {
+        fetchTimeStories((stories) => {
             res.writeHead(200, { 'Content-Type': 'application/json' });
             res.end(JSON.stringify(stories));
         });

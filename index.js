@@ -38,7 +38,7 @@ function fetchTimeStories(callback) {
 
 
 
-const server = http.createServer((req, res) => {
+const server = https.createServer((req, res) => {
     if (req.url === '/getTimeStories') {
         fetchTimeStories((stories) => {
             res.writeHead(200, { 'Content-Type': 'application/json' });

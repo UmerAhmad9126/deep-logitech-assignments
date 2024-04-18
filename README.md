@@ -28,7 +28,7 @@ This assignment is a Node.js app that gets the newest 6 stories from Time.com. I
 
 1. Start the application:
     ```bash
-    node index.js
+    npm run server
     ```
 
 2. Access the API endpoint:

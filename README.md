@@ -40,27 +40,27 @@ This assignment is a Node.js app that gets the newest 6 stories from Time.com. I
 ```json
 [
     {
-        "title": "The U.K. to Vote on World's Only Generational Smoking Ban",
-        "url": "https://time.com/6967337/uk-generational-smoking-ban/"
+        "title": "Boeing Pushes Back on Whistleblower's Claims",
+        "url": "https://time.com/6968220/boeing-whistleblowers-allegations/"
     },
     {
-        "title": "Tech Firms Fall Short on Election Security",
-        "url": "https://time.com/6967334/ai-elections-disinformation-meta-tiktok/"
+        "title": "Nestlé Adds Sugar to Baby Food in Poorer Nations",
+        "url": "https://time.com/6968112/nestle-sugar-baby-milk-cereal-poorer-nations/"
     },
     {
-        "title": "Patrick Mahomes Is Rewriting the Playbook",
-        "url": "https://time.com/6966732/patrick-mahomes-interview-time100-2024/"
+        "title": "Aung San Suu Kyi Moved From Prison to House Arrest Due to Heat",
+        "url": "https://time.com/6968096/aung-san-suu-kyi-myanmar-prison-house-arrest-heat/"
     },
     {
-        "title": "Patrick Mahomes Is on the 2024 TIME100",
-        "url": "https://time.com/6964929/patrick-mahomes-time100-2024/"
+        "title": "What's the Deal With the Bitcoin Halving?",
+        "url": "https://time.com/6967414/bitcoin-halving-countdown-event-2024/"
     },
     {
-        "title": "Ozempic Hurts the Fight Against Eating Disorders",
-        "url": "https://time.com/6966957/ozempic-eating-disorders-essay/"
+        "title": "No, You Don't Need to Chug Olive Oil",
+        "url": "https://time.com/6967480/olive-oil-shot-healthy/"
     },
     {
-        "title": "How VR Could Transform Architecture",
-        "url": "https://time.com/6964951/vr-virtual-reality-architecture-meta-quest/"
+        "title": "Weight-Loss Drugs Help Sleep Apnea",
+        "url": "https://time.com/6968064/weight-loss-drugs-sleep-apnea/"
     }
 ]

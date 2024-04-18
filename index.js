@@ -1,4 +1,5 @@
 const https = require('https');
+const http = require('http');
 
 
 function fetchTimeStories(callback) {
@@ -26,7 +27,6 @@ function fetchTimeStories(callback) {
                 storyCount++;
             }
 
-
             callback(latestStories)
 
         });
@@ -38,9 +38,10 @@ function fetchTimeStories(callback) {
 
 
 
-const server = https.createServer((req, res) => {
+const server = http.createServer((req, res) => {
     if (req.url === '/getTimeStories') {
         fetchTimeStories((stories) => {
+            // console.log('stories:', stories)
             res.writeHead(200, { 'Content-Type': 'application/json' });
             res.end(JSON.stringify(stories));
         });
@@ -50,7 +51,7 @@ const server = https.createServer((req, res) => {
     }
 });
 
-const PORT = 3000;
+const PORT = 8080;
 server.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });
